@@ -10,7 +10,7 @@ int main()
     bool check = true;
     int k = 0;
     
-    while (check) // цикл продолжается до тех пор, пока пользователь не введено корректное значение
+    while (check) // цикл продолжается до тех пор, пока пользователь не введет корректное значение
     {
         cout << "Please enter a prime number: ";
         cin >> n;
@@ -24,7 +24,6 @@ int main()
                 k = 0;
         }
         
-        // Проверка на предыдущее извлечение
         if (k>0)
         {
             cout << "Error, invalid input. Please try again\n";
@@ -33,8 +32,7 @@ int main()
         }
         else
         {
-            prime_init(atoi(n.c_str()));
-            if (is_prime())
+            if (is_prime(atoi(n.c_str())))
                 cout << "YES it is prime";
             else
                 cout << "NO it is not prime";
